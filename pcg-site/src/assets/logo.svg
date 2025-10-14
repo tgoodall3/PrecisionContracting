@@ -1,0 +1,7 @@
+<svg width="280" height="80" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="80" height="80" rx="16" fill="#0A1B2A"/>
+  <path d="M22 58L31.2 22H36.6L45.8 58H40.1L38 51.4H29.2L27.1 58H22Z" fill="#2AA7FF"/>
+  <path d="M48.4 22H63.5C67.4183 22 70.6 25.1817 70.6 29.1C70.6 32.86 67.6 35.8 63.86 35.8H56.8V58H48.4V22ZM56.8 30.8H62.1C63.31 30.8 64.2 29.91 64.2 28.7C64.2 27.49 63.31 26.6 62.1 26.6H56.8V30.8Z" fill="#FFFFFF"/>
+  <text x="100" y="36" fill="#0A1B2A" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">Precision Contracting Group</text>
+  <text x="100" y="58" fill="#2AA7FF" font-family="Inter, Arial, sans-serif" font-size="14">PCG</text>
+</svg>

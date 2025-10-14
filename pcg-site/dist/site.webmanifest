@@ -1,0 +1,15 @@
+{
+  "name": "Precision Contracting Group",
+  "short_name": "PCG",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#2AA7FF",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "64x64"
+    }
+  ]
+}

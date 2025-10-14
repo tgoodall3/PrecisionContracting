@@ -1,0 +1,9 @@
+<svg width="1280" height="600" viewBox="0 0 1280 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="600" rx="24" fill="#E5EAF0"/>
+  <path d="M200 200C260 120 360 120 420 200C480 280 560 280 620 200C680 120 780 120 840 200C900 280 980 280 1040 200" stroke="#0A1B2A" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="420" cy="200" r="24" fill="#2AA7FF"/>
+  <circle cx="620" cy="200" r="24" fill="#2AA7FF"/>
+  <circle cx="840" cy="200" r="24" fill="#2AA7FF"/>
+  <text x="220" y="360" fill="#0A1B2A" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="600">North Indianapolis Service Area</text>
+  <text x="220" y="410" fill="#0A1B2A" font-family="Inter, Arial, sans-serif" font-size="20">Carmel · Westfield · Noblesville · Pendleton · North Indy</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="800" rx="24" fill="url(#paint0_linear)" />
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="1280" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2AA7FF" />
+      <stop offset="1" stop-color="#0A1B2A" />
+    </linearGradient>
+  </defs>
+  <g opacity="0.2">
+    <path d="M200 320H420L500 480H280L200 320Z" fill="#FFFFFF"/>
+    <path d="M760 240H980L1060 400H840L760 240Z" fill="#FFFFFF"/>
+  </g>
+  <text x="80" y="160" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="600">Precision Craftsmanship</text>
+  <text x="80" y="230" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="28">Placeholder imagery for hero banner</text>
+</svg>
