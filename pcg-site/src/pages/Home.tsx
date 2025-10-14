@@ -92,25 +92,25 @@ const Home = () => {
             {highlightServices.map((service) => {
               const Icon = serviceIcons[service.id] ?? HomeModernIcon;
               return (
-                <Card key={service.id} className="flex h-full flex-col gap-4">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-brand-blue/15 text-brand-blue">
+                <Card key={service.id} className="flex h-full flex-col">
+                  <div className="flex items-center">
+                    <div className="flex h-12 w-12 flex-none items-center justify-center rounded-lg bg-brand-blue/15 text-brand-blue">
                       <Icon className="h-6 w-6" aria-hidden="true" />
                     </div>
-                    <div>
+                    <div className="ml-3">
                       <h3 className="text-lg font-semibold text-brand-navy">{service.name}</h3>
                       <p className="text-sm text-brand-navy/70">{service.summary}</p>
                     </div>
                   </div>
-                  <ul className="space-y-2 text-sm text-brand-navy/80">
+                  <ul className="mt-4 space-y-3 text-sm text-brand-navy/80">
                     {service.highlights.slice(0, 2).map((highlight) => (
-                      <li key={highlight} className="flex gap-2">
-                        <ArrowRightIcon className="mt-1 h-4 w-4 text-brand-blue" aria-hidden="true" />
-                        <span>{highlight}</span>
+                      <li key={highlight} className="flex items-start">
+                        <ArrowRightIcon className="mr-2 mt-1 h-4 w-4 flex-none text-brand-blue" aria-hidden="true" />
+                        <span className="leading-relaxed">{highlight}</span>
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-auto pt-2">
+                  <div className="mt-auto pt-4">
                     <Badge tone="neutral">{service.timeline}</Badge>
                   </div>
                 </Card>
@@ -143,13 +143,14 @@ const Home = () => {
           </div>
           <div className="grid gap-6 sm:grid-cols-2">
             {[grid1, grid2, grid3, grid4].map((src, index) => (
-              <img
-                key={src}
-                src={src}
-                alt={`Project highlight placeholder ${index + 1}`}
-                loading="lazy"
-                className="h-full w-full rounded-xl object-cover shadow-md"
-              />
+              <figure key={src} className="overflow-hidden rounded-xl shadow-md">
+                <img
+                  src={src}
+                  alt={`Project highlight placeholder ${index + 1}`}
+                  loading="lazy"
+                  className="block w-full h-auto"
+                />
+              </figure>
             ))}
           </div>
         </Container>
