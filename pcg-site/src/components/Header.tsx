@@ -46,7 +46,7 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <a
               href={phoneHref}
-              className="inline-flex items-center gap-2 font-semibold transition hover:text-white"
+              className="inline-flex items-center gap-2 font-semibold no-underline transition hover:text-white hover:no-underline"
             >
               <PhoneIcon className="h-4 w-4" aria-hidden="true" />
               <span>{CONTACT_PHONE}</span>
@@ -55,7 +55,7 @@ const Header = () => {
               href={GOOGLE_REVIEWS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden items-center gap-2 font-semibold transition hover:text-white lg:inline-flex"
+              className="hidden items-center gap-2 font-semibold no-underline transition hover:text-white hover:no-underline lg:inline-flex"
               aria-label="Read Precision Contracting Group Google reviews (opens in a new tab)"
             >
               <SparklesIcon className="h-4 w-4 text-brand-sky" aria-hidden="true" />
@@ -63,7 +63,7 @@ const Header = () => {
             </a>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 font-semibold text-white ring-1 ring-white/25 transition hover:bg-white/20"
+              className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 font-semibold text-white no-underline ring-1 ring-white/25 transition hover:bg-white/20 hover:no-underline"
               aria-label="Contact Precision Contracting Group"
             >
               <EnvelopeIcon className="h-4 w-4" aria-hidden="true" />
@@ -81,7 +81,7 @@ const Header = () => {
         <Container className="flex items-center justify-between gap-4 py-3 md:py-4">
           <Link
             to="/"
-            className="group flex items-center text-brand-navy"
+            className="group flex items-center text-brand-navy no-underline"
             aria-label="Precision Contracting Group home"
           >
             <img
@@ -97,7 +97,7 @@ const Header = () => {
                 to={item.to}
                 className={({ isActive }) =>
                   clsx(
-                    'rounded-full px-4 py-2 text-sm font-semibold text-brand-cobalt/80 transition hover:text-brand-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-blue',
+                    'rounded-full px-4 py-2 text-sm font-semibold text-brand-cobalt/80 no-underline transition hover:text-brand-navy hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-blue',
                     isActive &&
                       'bg-brand-blue/10 text-brand-navy shadow-sm'
                   )
@@ -149,7 +149,7 @@ const Header = () => {
               to={item.to}
               onClick={closeMobileNav}
               className={clsx(
-                'block rounded-xl border border-brand-gray/50 px-3 py-3 text-sm font-semibold text-brand-cobalt/80 transition hover:border-brand-blue/40 hover:bg-brand-blue/10 hover:text-brand-navy',
+                'block rounded-xl border border-brand-gray/50 px-3 py-3 text-sm font-semibold text-brand-cobalt/80 no-underline transition hover:border-brand-blue/40 hover:bg-brand-blue/10 hover:text-brand-navy hover:no-underline',
                 pathname === item.to && 'border-brand-blue/40 bg-brand-blue/10 text-brand-navy'
               )}
             >

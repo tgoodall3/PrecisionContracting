@@ -22,9 +22,9 @@ const Footer = () => (
       <div>
         <h3 className="text-sm font-semibold uppercase tracking-wide text-brand-navy">Quick Links</h3>
         <nav className="mt-4 space-y-2 text-sm">
-          <Link to="/" className="block text-brand-navy/80 transition hover:text-brand-navy">Home</Link>
-          <Link to="/about" className="block text-brand-navy/80 transition hover:text-brand-navy">About</Link>
-          <Link to="/services" className="block text-brand-navy/80 transition hover:text-brand-navy">Services</Link>
+          <Link to="/" className="block text-brand-navy/80 underline-offset-2 transition hover:text-brand-navy">Home</Link>
+          <Link to="/about" className="block text-brand-navy/80 underline-offset-2 transition hover:text-brand-navy">About</Link>
+          <Link to="/services" className="block text-brand-navy/80 underline-offset-2 transition hover:text-brand-navy">Services</Link>
         </nav>
       </div>
       <div>
@@ -48,7 +48,7 @@ const Footer = () => (
           href={GOOGLE_REVIEWS_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-indigo transition hover:text-brand-navy"
+          className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-indigo no-underline transition hover:text-brand-navy hover:no-underline"
           aria-label="Open Precision Contracting Group Google reviews in a new tab"
         >
           Read our Google reviews

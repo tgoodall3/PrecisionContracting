@@ -12,7 +12,7 @@ export type ButtonStyleOptions = {
 };
 
 const baseClasses =
-  'inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-60 active:scale-[0.98]';
+  'inline-flex items-center justify-center gap-2 rounded-lg font-semibold no-underline transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 hover:no-underline disabled:cursor-not-allowed disabled:opacity-60 active:scale-[0.98]';
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
     'bg-brand-navy text-white shadow-brand hover:bg-brand-midnight focus-visible:outline-brand-blue focus-visible:outline-offset-3',
