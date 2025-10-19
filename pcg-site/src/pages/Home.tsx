@@ -14,11 +14,11 @@ import Badge from '@/components/Badge';
 import SEO from '@/components/SEO';
 import { buttonStyles } from '@/components/Button';
 import { services } from '@/data/services';
-import heroImage from '@/assets/placeholders/AdobeStock_520355094.jpeg';
-import grid1 from '@/assets/placeholders/AdobeStock_993908864.jpeg';
-import grid2 from '@/assets/placeholders/AdobeStock_209110308.jpeg';
-import grid3 from '@/assets/placeholders/AdobeStock_338501268.jpeg';
-import grid4 from '@/assets/placeholders/AdobeStock_295763262.jpeg';
+import heroImage from '@/assets/placeholders/handshake.png';
+import grid1 from '@/assets/placeholders/flooring.png';
+import grid2 from '@/assets/placeholders/electrical@0.25x.png';
+import grid3 from '@/assets/placeholders/door.png';
+import grid4 from '@/assets/placeholders/deck.png';
 import { GOOGLE_REVIEWS_URL, TAGLINE } from '@/config';
 
 const serviceIcons: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
