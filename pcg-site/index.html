@@ -5,15 +5,65 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Precision Contracting Group</title>
-    <meta name="description" content="Precision Contracting Group delivers dependable contracting across North Indianapolis." />
-    <meta property="og:title" content="Precision Contracting Group" />
+    <title>Precision Contracting Group | North Indianapolis Remodeling Contractors</title>
+    <meta name="description" content="Precision Contracting Group delivers dependable remodeling, flooring, drywall, and exterior upgrades throughout North Indianapolis." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Precision Contracting Group | North Indianapolis Remodeling Contractors" />
     <meta property="og:description" content="Quality contracting for Carmel, Westfield, Noblesville, Pendleton, and North Indy." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.precisioncontractinggroup.com/" />
     <meta property="og:image" content="https://www.precisioncontractinggroup.com/og-default.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#2AA7FF" />
+    <style>
+      .prerender-home {
+        max-width: 60rem;
+        margin: 0 auto;
+        padding: 4rem 1.5rem;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        color: #0a1b2a;
+        line-height: 1.6;
+      }
+      .prerender-home h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      .prerender-home h2 {
+        font-size: 1.25rem;
+        margin-top: 2.5rem;
+        margin-bottom: 0.75rem;
+      }
+      .prerender-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+      }
+      .prerender-links a {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 0.9rem;
+        border-radius: 999px;
+        border: 1px solid #047ed4;
+        background-color: #047ed412;
+        color: #0a1b2a;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .prerender-list {
+        list-style: disc;
+        padding-left: 1.25rem;
+        margin: 0.75rem 0 0;
+      }
+      .prerender-list li + li {
+        margin-top: 0.35rem;
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        .prerender-links a:hover {
+          background-color: #047ed422;
+        }
+      }
+    </style>
     <!-- Google Analytics (GA4) placeholder: replace G-XXXXXXX with your measurement ID when you add analytics -->
     <script>
       // window.dataLayer = window.dataLayer || [];
@@ -23,7 +73,38 @@
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <main class="prerender-home">
+        <h1>North Indianapolis remodeling &amp; contracting specialists</h1>
+        <p>
+          Precision Contracting Group manages remodels, flooring, drywall, basements, and exterior upgrades with clear scopes,
+          transparent pricing, and dependable trades across Carmel, Westfield, Noblesville, Pendleton, and the north side of Indianapolis.
+        </p>
+        <div class="prerender-links">
+          <a href="/services">Explore services</a>
+          <a href="/about">About our team</a>
+          <a href="/contact">Request a quote</a>
+        </div>
+        <section>
+          <h2>Popular services we deliver</h2>
+          <ul class="prerender-list">
+            <li><a href="/services">Flooring installation, refinishing, and luxury vinyl plank</a></li>
+            <li><a href="/services">Drywall repair, finishing, and interior painting</a></li>
+            <li><a href="/services">Kitchen and bathroom remodeling with coordinated trades</a></li>
+            <li><a href="/services">Basement finishing and live-in ready conversions</a></li>
+            <li><a href="/services">Exterior siding, gutters, and outdoor living enhancements</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Why homeowners choose Precision Contracting Group</h2>
+          <ul class="prerender-list">
+            <li>Licensed and insured crews with verified references</li>
+            <li>Project leads who manage milestones, communication, and clean job sites</li>
+            <li>Responsive proposals, photo documentation, and detailed close-out packets</li>
+          </ul>
+        </section>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
