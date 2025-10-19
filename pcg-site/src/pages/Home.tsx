@@ -84,7 +84,6 @@ const Home = () => {
         description="Precision Contracting Group manages remodels, flooring, basements, drywall, and exterior upgrades with transparent scopes, firm schedules, and clean job sites across Carmel, Westfield, Noblesville, and the north side of Indianapolis."
         path="/"
       />
-      <main>
         <Section className="relative overflow-hidden bg-gradient-to-br from-brand-blue/10 via-white to-brand-sand">
           <div className="absolute inset-0 bg-radial-spotlight opacity-35" aria-hidden="true" />
           <div className="absolute -left-20 bottom-0 h-64 w-64 rounded-full bg-brand-mint/30 blur-3xl" aria-hidden="true" />
@@ -331,7 +330,6 @@ const Home = () => {
             </div>
           </Container>
         </Section>
-      </main>
     </>
   );
 };

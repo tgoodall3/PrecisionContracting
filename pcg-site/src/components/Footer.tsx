@@ -8,7 +8,7 @@ const Footer = () => (
     <Container className="grid gap-10 py-12 md:grid-cols-4">
       <div className="md:col-span-2">
         <div className="flex items-center gap-3">
-          <img src={logo} alt="Precision Contracting Group" className="h-12 w-auto rounded-md" />
+          <img src={logo} alt="Precision Contracting Group logo" className="h-12 w-auto rounded-md" />
           <div>
             <p className="text-base font-semibold text-brand-navy">Precision Contracting Group</p>
             <p className="text-sm text-brand-navy/70">{TAGLINE}</p>

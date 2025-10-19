@@ -6,7 +6,7 @@ import { buttonStyles } from '@/components/Button';
 
 const NotFound = () => (
   <>
-    <SEO title="Page not found" description="We couldn't find the page you were looking for." path="/*" />
+    <SEO title="Page not found" description="We couldn't find the page you were looking for." path="/*" noIndex />
     <Section className="flex min-h-[50vh] items-center">
       <Container className="text-center">
         <h1 className="text-4xl font-semibold text-brand-navy">Page not found</h1>

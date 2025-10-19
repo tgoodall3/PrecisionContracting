@@ -6,6 +6,7 @@ import Section from '@/components/Section';
 import Card from '@/components/Card';
 import Badge from '@/components/Badge';
 import FAQAccordion from '@/components/FAQAccordion';
+import FAQSchema from '@/components/FAQSchema';
 import SEO from '@/components/SEO';
 import { buttonStyles } from '@/components/Button';
 import { services, type Service } from '@/data/services';
@@ -31,6 +32,7 @@ const Services = () => {
         description="Explore flooring, drywall, kitchen & bath remodels, basement finishing, and exterior upgrades from Precision Contracting Group."
         path="/services"
       />
+      <FAQSchema faqs={faqs} path="/services" />
       <Section className="pt-12">
         <Container>
           <Badge className="w-max">What we do</Badge>

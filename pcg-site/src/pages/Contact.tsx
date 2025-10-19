@@ -14,7 +14,7 @@ import SEO from '@/components/SEO';
 import { services, type Service } from '@/data/services';
 import { CONTACT_EMAIL, CONTACT_PHONE, FORMSPREE_ID, SERVICE_AREAS } from '@/config';
 import { useSelections } from '@/store/selections';
-import mapImage from '@/assets/placeholders//download.png';
+import mapImage from '@/assets/placeholders/download.png';
 
 type FormState = {
   name: string;
@@ -295,7 +295,7 @@ const Contact = () => {
               <h2 className="text-lg font-semibold text-brand-navy">Where we work</h2>
               <img
                 src={mapImage}
-                alt="Precision Contracting Group service map illustration"
+                alt="Map showing Precision Contracting Group service coverage across North Indianapolis neighborhoods."
                 className="w-full rounded-lg"
                 loading="lazy"
               />

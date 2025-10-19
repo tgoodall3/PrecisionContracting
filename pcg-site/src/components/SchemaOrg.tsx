@@ -1,4 +1,4 @@
-import { CONTACT_EMAIL, CONTACT_PHONE, SERVICE_AREAS, SITE_NAME, SITE_URL } from '@/config';
+import { CONTACT_EMAIL, CONTACT_PHONE, GOOGLE_REVIEWS_URL, SERVICE_AREAS, SITE_NAME, SITE_URL } from '@/config';
 
 const schema = {
   '@context': 'https://schema.org',
@@ -30,7 +30,7 @@ const schema = {
       closes: '18:00'
     }
   ],
-  sameAs: []
+  sameAs: [GOOGLE_REVIEWS_URL]
 };
 
 const SchemaOrg = () => {
