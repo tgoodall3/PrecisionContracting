@@ -1,7 +1,7 @@
 export const SITE_NAME = 'Precision Contracting Group';
 export const SITE_URL = 'https://www.precisioncontractinggroup.com';
 export const FORMSPREE_ID = 'YOUR_ID_HERE';
-export const CONTACT_EMAIL = 'sales@precisioncontractinggroup.com';
+export const CONTACT_EMAIL = 'sales@precisionpaintinggroup.com';
 export const CONTACT_PHONE = '765-617-1065';
 export const SERVICE_AREAS = [
   'Carmel',
