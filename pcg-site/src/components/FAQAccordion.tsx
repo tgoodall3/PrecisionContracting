@@ -29,9 +29,9 @@ const FAQAccordion = ({ items }: FAQAccordionProps) => {
             >
               <span>{item.question}</span>
               {open ? (
-                <MinusSmallIcon className="h-5 w-5 text-brand-blue" aria-hidden="true" />
+                <MinusSmallIcon className="h-5 w-5 text-brand-indigo" aria-hidden="true" />
               ) : (
-                <PlusSmallIcon className="h-5 w-5 text-brand-blue" aria-hidden="true" />
+                <PlusSmallIcon className="h-5 w-5 text-brand-indigo" aria-hidden="true" />
               )}
             </button>
             <div

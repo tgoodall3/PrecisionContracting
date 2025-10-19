@@ -12,11 +12,13 @@ export type ButtonStyleOptions = {
 };
 
 const baseClasses =
-  'inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-60';
+  'inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-60 active:scale-[0.98]';
 const variantClasses: Record<ButtonVariant, string> = {
-  primary: 'bg-brand-blue text-brand-navy hover:bg-brand-blue/90 focus-visible:outline-brand-blue',
-  secondary: 'border border-brand-blue text-brand-blue hover:bg-brand-blue/10 focus-visible:outline-brand-blue',
-  ghost: 'text-brand-navy hover:text-brand-blue focus-visible:outline-brand-blue'
+  primary:
+    'bg-brand-navy text-white shadow-brand hover:bg-brand-midnight focus-visible:outline-brand-blue focus-visible:outline-offset-3',
+  secondary:
+    'border border-brand-cobalt/50 bg-white text-brand-navy shadow-sm hover:border-brand-cobalt hover:bg-brand-sand focus-visible:outline-brand-blue focus-visible:outline-offset-3',
+  ghost: 'text-brand-cobalt hover:text-brand-navy focus-visible:outline-brand-blue focus-visible:outline-offset-3'
 };
 const sizeClasses: Record<ButtonSize, string> = {
   md: 'px-5 py-3 text-sm',

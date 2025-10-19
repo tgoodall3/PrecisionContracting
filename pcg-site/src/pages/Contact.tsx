@@ -14,7 +14,7 @@ import SEO from '@/components/SEO';
 import { services, type Service } from '@/data/services';
 import { CONTACT_EMAIL, CONTACT_PHONE, FORMSPREE_ID, SERVICE_AREAS } from '@/config';
 import { useSelections } from '@/store/selections';
-import mapImage from '@/assets/placeholders/map.svg';
+import mapImage from '@/assets/placeholders//download.png';
 
 type FormState = {
   name: string;
@@ -259,7 +259,7 @@ const Contact = () => {
               </Button>
               <p className="text-xs text-brand-navy/60">
                 Prefer email? Reach us directly at{' '}
-                <a href={`mailto:${CONTACT_EMAIL}`} className="text-brand-blue hover:underline">
+                <a href={`mailto:${CONTACT_EMAIL}`} className="text-brand-indigo hover:text-brand-navy">
                   {CONTACT_EMAIL}
                 </a>.
               </p>
@@ -270,19 +270,19 @@ const Contact = () => {
               <h2 className="text-lg font-semibold text-brand-navy">Contact details</h2>
               <div className="space-y-3 text-sm text-brand-navy/80">
                 <p className="flex items-center gap-2">
-                  <EnvelopeIcon className="h-5 w-5 text-brand-blue" aria-hidden="true" />
-                  <a href={`mailto:${CONTACT_EMAIL}`} className="text-brand-blue hover:underline">
+                  <EnvelopeIcon className="h-5 w-5 text-brand-indigo" aria-hidden="true" />
+                  <a href={`mailto:${CONTACT_EMAIL}`} className="text-brand-indigo hover:text-brand-navy">
                     {CONTACT_EMAIL}
                   </a>
                 </p>
                 <p className="flex items-center gap-2">
-                  <PhoneIcon className="h-5 w-5 text-brand-blue" aria-hidden="true" />
-                  <a href={`tel:${CONTACT_PHONE.replace(/\D/g, '')}`} className="text-brand-blue hover:underline">
+                  <PhoneIcon className="h-5 w-5 text-brand-indigo" aria-hidden="true" />
+                  <a href={`tel:${CONTACT_PHONE.replace(/\D/g, '')}`} className="text-brand-indigo hover:text-brand-navy">
                     {CONTACT_PHONE}
                   </a>
                 </p>
                 <p className="flex items-start gap-2">
-                  <MapPinIcon className="mt-0.5 h-5 w-5 text-brand-blue" aria-hidden="true" />
+                  <MapPinIcon className="mt-0.5 h-5 w-5 text-brand-indigo" aria-hidden="true" />
                   <span>
                     North Indianapolis service area:
                     <br />

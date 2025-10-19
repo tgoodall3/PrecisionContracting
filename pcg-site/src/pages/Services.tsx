@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import { ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline';
+import { useMemo } from 'react';
 import Container from '@/components/Container';
 import Section from '@/components/Section';
 import Card from '@/components/Card';
 import Badge from '@/components/Badge';
-import CheckboxPill from '@/components/FormControls/CheckboxPill';
 import FAQAccordion from '@/components/FAQAccordion';
 import SEO from '@/components/SEO';
 import { buttonStyles } from '@/components/Button';
@@ -13,7 +13,16 @@ import { faqs } from '@/data/faqs';
 import { useSelections } from '@/store/selections';
 
 const Services = () => {
-  const { selectedServices, toggleService } = useSelections();
+  const { selectedServices, toggleService, clearServices } = useSelections();
+
+  const selectedServiceNames = useMemo(
+    () =>
+      selectedServices
+        .map((id: string) => services.find((service: Service) => service.id === id))
+        .filter((service): service is Service => Boolean(service))
+        .map((service) => service.name),
+    [selectedServices]
+  );
 
   return (
     <>
@@ -25,54 +34,32 @@ const Services = () => {
       <Section className="pt-12">
         <Container>
           <Badge className="w-max">What we do</Badge>
-          <div className="mt-6 grid gap-8 lg:grid-cols-[1.3fr,1fr]">
-            <div>
-              <h1 className="text-3xl font-semibold text-brand-navy sm:text-4xl">Services built around dependable project delivery.</h1>
-              <p className="mt-4 text-brand-navy/75">
-                Choose the scope you need and we&apos;ll align licensed trades, vetted suppliers, and accountable schedules. Use the "Add to quote"
-                toggle to prefill your contact request.
-              </p>
-              <Link to="/contact" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-blue transition hover:text-brand-navy">
-                Ready to get started?
-                <ClipboardDocumentCheckIcon className="h-4 w-4" aria-hidden="true" />
-              </Link>
-            </div>
-            <Card className="space-y-4">
-              <h2 className="text-lg font-semibold text-brand-navy">Current selections</h2>
-              <p className="text-sm text-brand-navy/70">
-                Services you toggle appear below and will prefill the contact form.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {selectedServices.length ? (
-                  selectedServices.map((id: string) => {
-                    const service = services.find((item: Service) => item.id === id);
-                    if (!service) return null;
-                    return (
-                      <span key={id} className="rounded-full bg-brand-blue/15 px-3 py-1 text-xs font-semibold uppercase text-brand-navy">
-                        {service.name}
-                      </span>
-                    );
-                  })
-                ) : (
-                  <p className="text-sm text-brand-navy/60">No services selected yet.</p>
-                )}
-              </div>
-            </Card>
+          <div className="mt-6 max-w-3xl space-y-4">
+            <h1 className="text-3xl font-semibold text-brand-navy sm:text-4xl">Services built around dependable project delivery.</h1>
+            <p className="text-brand-navy/75">
+              Choose the scopes you need and we&apos;ll align licensed trades, vetted suppliers, and accountable schedules. Add services to your
+              project as you browse, then send the full list through our contact form.
+            </p>
+            <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-semibold text-brand-indigo transition hover:text-brand-navy">
+              Ready to get started?
+              <ClipboardDocumentCheckIcon className="h-4 w-4" aria-hidden="true" />
+            </Link>
           </div>
         </Container>
       </Section>
 
       <Section className="bg-white/80">
-        <Container className="space-y-8">
-          {services.map((service: Service) => (
-            <Card key={service.id} className="grid gap-6 md:grid-cols-[1.2fr,1fr]">
-              <div>
+        <Container className="space-y-6">
+          {services.map((service: Service) => {
+            const isSelected = selectedServices.includes(service.id);
+            return (
+              <Card key={service.id} className="space-y-5 p-6 sm:p-8">
                 <div className="flex flex-wrap items-center gap-3">
                   <h2 className="text-2xl font-semibold text-brand-navy">{service.name}</h2>
                   <Badge tone="neutral">{service.timeline}</Badge>
                 </div>
-                <p className="mt-3 text-brand-navy/70">{service.blurb}</p>
-                <ul className="mt-5 space-y-3 text-sm text-brand-navy/80">
+                <p className="text-brand-navy/70">{service.blurb}</p>
+                <ul className="space-y-3 text-sm text-brand-navy/80">
                   {service.highlights.map((highlight) => (
                     <li key={highlight} className="flex gap-2">
                       <span className="mt-1 h-2 w-2 rounded-full bg-brand-blue" aria-hidden="true" />
@@ -80,23 +67,32 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
-              <div className="flex flex-col justify-between gap-4 rounded-lg bg-brand-blue/10 p-5">
-                <p className="text-sm font-semibold text-brand-navy">Add to quote</p>
-                <CheckboxPill
-                  label={selectedServices.includes(service.id) ? 'Selected for quote' : 'Add this service'}
-                  checked={selectedServices.includes(service.id)}
-                  onChange={() => toggleService(service.id)}
-                />
-                <p className="text-xs text-brand-navy/60">
-                  We&apos;ll confirm details, schedule, and budget range during your consultation.
-                </p>
-                <Link to="/contact" className={buttonStyles({ variant: 'primary', size: 'sm' })}>
-                  Prefill contact form
-                </Link>
-              </div>
-            </Card>
-          ))}
+                <div className="flex flex-col gap-2 border-t border-brand-gray/70 pt-4 sm:flex-row sm:items-center sm:justify-between">
+                  <button
+                    type="button"
+                    onClick={() => toggleService(service.id)}
+                    className={buttonStyles({
+                      variant: isSelected ? 'secondary' : 'primary',
+                      size: 'sm',
+                      className: isSelected ? 'border-brand-indigo text-brand-indigo hover:text-brand-navy' : undefined
+                    })}
+                  >
+                    {isSelected ? 'Remove from project' : 'Add to project'}
+                  </button>
+                  <Link
+                    to="/contact"
+                    className={buttonStyles({
+                      variant: 'secondary',
+                      size: 'sm',
+                      className: 'border-brand-indigo text-brand-indigo hover:text-brand-navy sm:w-auto'
+                    })}
+                  >
+                    Ask about this service
+                  </Link>
+                </div>
+              </Card>
+            );
+          })}
         </Container>
       </Section>
 
@@ -127,6 +123,32 @@ const Services = () => {
           </div>
         </Container>
       </Section>
+      {selectedServices.length > 0 ? (
+        <div className="fixed inset-x-0 bottom-4 z-50 flex justify-center px-4">
+          <div className="flex w-full max-w-2xl flex-col gap-3 rounded-2xl border border-brand-gray/70 bg-white/95 px-5 py-4 shadow-brand-soft backdrop-blur sm:flex-row sm:items-center sm:justify-between">
+            <div className="text-sm text-brand-navy">
+              <span className="font-semibold text-brand-indigo">{selectedServices.length}</span> service
+              {selectedServices.length > 1 ? 's' : ''} added:&nbsp;
+              <span className="font-semibold text-brand-navy">
+                {selectedServiceNames.slice(0, 2).join(', ')}
+                {selectedServiceNames.length > 2 ? `, +${selectedServiceNames.length - 2} more` : ''}
+              </span>
+            </div>
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+              <Link to="/contact" className={buttonStyles({ variant: 'primary', size: 'sm' })}>
+                Review & send
+              </Link>
+              <button
+                type="button"
+                onClick={clearServices}
+                className={buttonStyles({ variant: 'ghost', size: 'sm', className: 'text-brand-indigo hover:text-brand-navy' })}
+              >
+                Clear
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </>
   );
 };

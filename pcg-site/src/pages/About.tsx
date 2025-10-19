@@ -71,7 +71,7 @@ const About = () => {
               <ul className="mt-4 space-y-6">
                 {values.map((value) => (
                   <li key={value.title}>
-                    <h3 className="text-sm font-semibold uppercase tracking-wide text-brand-blue">{value.title}</h3>
+                    <h3 className="text-sm font-semibold uppercase tracking-wide text-brand-indigo">{value.title}</h3>
                     <p className="mt-2 text-sm text-brand-navy/70">{value.description}</p>
                   </li>
                 ))}
@@ -90,7 +90,7 @@ const About = () => {
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {steps.map((step) => (
               <Card key={step.title} className="space-y-3">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-brand-blue">{step.title}</h3>
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-brand-indigo">{step.title}</h3>
                 <p className="text-sm text-brand-navy/70">{step.detail}</p>
               </Card>
             ))}
@@ -108,7 +108,7 @@ const About = () => {
             <ul className="mt-6 grid gap-3 text-sm text-brand-navy/80 sm:grid-cols-2">
               {SERVICE_AREAS.map((area: string) => (
                 <li key={area} className="flex items-center gap-2">
-                  <CheckCircleIcon aria-hidden="true" className="h-4 w-4 text-brand-blue" />
+                  <CheckCircleIcon aria-hidden="true" className="h-4 w-4 text-brand-indigo" />
                   <span>{area}</span>
                 </li>
               ))}
@@ -123,7 +123,7 @@ const About = () => {
               Start the conversation
             </Link>
             <p className="text-xs text-brand-navy/60">
-              Prefer a call? Reach us at <a href="tel:17656171065" className="text-brand-blue hover:underline">765-617-1065</a>.
+              Prefer a call? Reach us at <a href="tel:17656171065" className="text-brand-indigo hover:text-brand-navy">765-617-1065</a>.
             </p>
           </Card>
         </Container>

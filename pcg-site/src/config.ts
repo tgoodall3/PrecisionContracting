@@ -12,8 +12,10 @@ export const SERVICE_AREAS = [
 ];
 export const TAGLINE = 'The Precision Promise: clear scopes, honest timelines, quality workmanship.';
 export const BRAND_COLORS = {
-  primary: '#2AA7FF',
+  primary: '#047ed4ff',
   navy: '#0A1B2A',
   gray: '#E5EAF0',
   white: '#FFFFFF'
 };
+export const GOOGLE_REVIEWS_URL =
+  'https://maps.app.goo.gl/S6nyJCasqjfJvNXr9';
